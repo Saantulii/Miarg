@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.screen {
+    background-color: #f5f5f5;
+    border: 2px solid red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 700px;
+    padding-bottom: 20px; /* Espacio en la parte inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parte-azul {
+    background-color: #0077C8;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#reiniciar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-left: 0;
+    height: 40px;
+    width: 40px;
+}
+
+#DNI-DIGITAL {
+    flex-grow: 1;
+    margin-left: 40px;
+    text-align: start;
+    color: white;
+    font-weight: bold;
+}
+
+#dni-container {
+    position: relative;
+    width: 350px;
+    height: auto;
+    perspective: 1000px;
+    margin: 20px 0; /* Espacio arriba y abajo */
+}
+
+#dni-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+}
+
+.DNI {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.DNI-ATRAS {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+#update-text{
+    margin-top: 220px;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    align-items: center; /* Centra verticalmente los elementos */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%;
+    background-color: #fff; /* Ajusta el color de fondo */
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0; /* Línea superior para resaltar el footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
+}
+
+footer a {
+    text-decoration: none;
+    color: #888; /* Color del icono */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto debajo de los íconos */
+}
+
+footer a .icon {
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    display: block; /* Hace que el icono esté encima del texto */
+    margin-bottom: 4px; /* Espacio entre el icono y el texto */
+}
